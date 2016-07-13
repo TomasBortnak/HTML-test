@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Obec Vojcice</title>
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylePrint.css" media="print">
+
+</head>
+
+<body>
+
+
+
+<header id="header">
+    <div id="logo">
+        <img src="logoObce.png" alt="logo obce">
+    </div>
+</header>
+
+<main>
+    <div class="komentare">
+        <h2> &nbsp; Sem pridajte svoj komentar k obci</h2>
+
+        <form id="frmArt" method="post" action="badProcessing.html">
+            <fieldset>
+                <legend>Odoslanie príspevku</legend>
+
+                <br><br>
+
+                <fieldset>
+                    <legend>Autor</legend>
+
+                    <label for="title">Meno:</label>
+                    <input type="Author" name="author" id="author" size="50"
+                           maxlength="50" required/>
+
+                </fieldset>
+
+
+                <br><br>
+
+                <fieldset>
+                    <legend>Príspevok</legend>
+
+                    <label for="title">Názov:</label><br>
+                    <input type="text" name="title" id="title" size="50"
+                           maxlength="100" pattern="\S[\S\s]*"
+                           required title="Názov článku. Povinná položka. Maximálna dĺžka: 100 znakov. Prvý znak nesmie byť medzera."
+                           placeholder="Sem napiste nazov clanku" />
+
+
+                    <br><br>
+
+                    <select id="zanerElm" name="zaner"  size="1">
+                        <option value="a">prispevok o obci</option>
+                        <option value="b">oznam</option>
+                        <option value="c">dianie v obci</option>
+                        <option value="d">inzerat</option>
+                        <option value="e">staznost</option>
+                    </select>
+                    <br>
+
+                    <br><br>
+
+                    <label for="content">Text článku:</label><br>
+                    <textarea name="content" id="content" spellcheck="true"
+                              lang="sk" cols="52" rows="10"
+                              required title="Obsah článku. Povinná položka.  Môže byť obyčajný text alebo html."
+                              placeholder="Sem napiste text clanku"></textarea>
+
+
+                </fieldset>
+
+                <fieldset>
+                    <legend>Udaje o prispevku</legend>
+
+                        <label for="nalada2Elm">Vo Vojciciach: </label>
+                        <input type="radio" id="nalada2Elm" name="nalada"  value="2"  checked />
+                        <label for="nalada2Elm">sa mi paci</label>
+                        <input type="radio" id="nalada1Elm" name="nalada"  value="1" />
+                        <label for="nalada1Elm">sa mi nepaci</label>
+                        <input type="radio" id="nalada0Elm" name="nalada"  value="0" />
+                        <label for="nalada0Elm">netravim vela casu</label>
+
+                        <br><br>
+
+                        <label for="jedlo1Elm">V obci:</label>
+                        <input type="checkbox" id="jedlo1Elm" name="jedloR"   />
+                        <!--<input type="checkbox" id="jedlo1Elm" name="jedloR" value="ranajky"  />-->
+                        <label for="jedlo1Elm">mam trvaly pobyt</label>
+                        <input type="checkbox" id="jedlo2Elm" name="jedloO"  />
+                        <label for="jedlo2Elm">mam chatu</label>
+                        <input type="checkbox" id="jedlo3Elm" name="jedloV"   />
+                        <label for="jedlo3Elm">chodim sem za rodinou</label>
+
+                        <br><br>
+
+                </fieldset>
+
+
+                <br><br>
+                <button type="submit"> Odoslať </button>
+
+            </fieldset>
+
+            <br><br>
+
+
+        </form>
+    </div>
+    <!-- Vlozenie jQuery -->
+    <script src="../js/jquery.min.js"></script>
+
+    <!-- Vlozenie skriptu tohto dokumentu -->
+    <script src="../js/update.js"></script>
+</main>
+
+<nav id="nav">
+    <div class="innertube">
+        <h1>Menu</h1>
+        <ul>
+            <li><a href ="vojcice.html">Domov</a></li>
+            <li><a href="historia.html">Historia obce</a></li>
+            <li><a href="pocasie.html">Pocasie</a></li>
+            <li><a href="fotogaleria.html">Fotogaleria</a></li>
+            <li><a href="obyvatelstvo.html">Obyvatelstvo</a></li>
+            <li><a href="komentare.html">Komentare</a></li>
+        </ul>
+
+    </div>
+</nav>
+</body>
+</html>
